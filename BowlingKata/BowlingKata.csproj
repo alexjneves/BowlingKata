@@ -40,8 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bowling.cs" />
-    <Compile Include="Exceptions\BowlingException.cs" />
-    <Compile Include="Frame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
