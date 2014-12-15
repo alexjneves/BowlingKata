@@ -6,6 +6,7 @@ namespace BowlingKata.Test
     [TestFixture]
     public class BowlingKataTests
     {
+        private const int Strike = 10;
         private Bowling _game;
 
         [SetUp]
@@ -45,7 +46,7 @@ namespace BowlingKata.Test
         [Test]
         public void WhenRollingAStrike_ShouldCalculateCorrectScore()
         {
-            _game.Roll(10);
+            _game.Roll(Strike);
 
             _game.Roll(6);
             _game.Roll(2);
@@ -56,7 +57,7 @@ namespace BowlingKata.Test
         [Test]
         public void WhenRollingAllStrikes_ShouldCalculateCorrectScore()
         {
-            RollMany(10, 12);
+            RollMany(Strike, 12);
 
             _game.CalculateScore().Should().Be(300);
         }
